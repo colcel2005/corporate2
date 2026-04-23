@@ -30,20 +30,136 @@
       <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
       <!-- fonts -->
       <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+      <!-- Estilos CORREGIDOS para alineación de iconos -->
       <style>
-         .event_section .blog_img { position: relative; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
-         .event_section .video_bt { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); cursor: pointer; transition: all 0.3s ease; }
-         .event_section .video_bt:hover { transform: translate(-50%, -50%) scale(1.1); }
-         .event_section .play_icon img { width: 80px; height: 80px; animation: pulse 2s infinite; }
-         @keyframes pulse { 0% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.1); opacity: 0.8; } 100% { transform: scale(1); opacity: 1; } }
-         .services_section .icon_1 { text-align: center !important; min-height: 100px; display: flex; align-items: center; justify-content: center; }
-         .services_section .icon_1 img { height: 80px !important; width: auto !important; object-fit: contain !important; display: block !important; margin: 0 auto !important; }
-         .services_section .selection_text { text-align: center !important; font-weight: 600 !important; margin-top: 15px !important; margin-bottom: 15px !important; }
-         .services_section .many_text { text-align: center !important; padding-left: 10px !important; padding-right: 10px !important; min-height: 100px; }
-         .services_section .readmore_bt { text-align: center !important; margin-top: 15px !important; margin-bottom: 20px !important; }
-         .services_section .readmore_bt a { display: inline-block !important; padding: 8px 25px !important; font-size: 14px !important; background-color: #f26522 !important; color: #fff !important; border-radius: 25px !important; text-decoration: none !important; transition: all 0.3s ease !important; }
-         .services_section .readmore_bt a:hover { background-color: #d35400 !important; transform: translateY(-2px) !important; }
-         @media (max-width: 768px) { .services_section .col-md-4 { margin-bottom: 30px; } }
+         /* ============================================ */
+         /* CORRECCIÓN DE ALINEACIÓN DE ICONOS - EVENTOS   */
+         /* ============================================ */
+         
+         /* Contenedor de iconos - centrado perfecto */
+         .services_section .icon_1 {
+            text-align: center !important;
+            width: 100% !important;
+            min-height: 100px !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            margin-bottom: 15px !important;
+         }
+         
+         /* Iconos - tamaño uniforme y centrado */
+         .services_section .icon_1 img {
+            height: 80px !important;
+            width: 80px !important;
+            object-fit: contain !important;
+            display: block !important;
+            margin: 0 auto !important;
+         }
+         
+         /* Títulos de eventos - centrados */
+         .services_section .selection_text {
+            text-align: center !important;
+            font-weight: 600 !important;
+            font-size: 18px !important;
+            margin-top: 10px !important;
+            margin-bottom: 15px !important;
+            min-height: 50px !important;
+         }
+         
+         /* Descripciones de eventos - centradas y altura uniforme */
+         .services_section .many_text {
+            text-align: center !important;
+            padding-left: 15px !important;
+            padding-right: 15px !important;
+            min-height: 100px !important;
+            font-size: 14px !important;
+            line-height: 1.5 !important;
+         }
+         
+         /* Botones - centrados y con estilo consistente */
+         .services_section .readmore_bt {
+            text-align: center !important;
+            margin-top: 20px !important;
+            margin-bottom: 15px !important;
+         }
+         
+         .services_section .readmore_bt a {
+            display: inline-block !important;
+            padding: 10px 25px !important;
+            font-size: 14px !important;
+            font-weight: 500 !important;
+            background-color: #f26522 !important;
+            color: #ffffff !important;
+            border-radius: 30px !important;
+            text-decoration: none !important;
+            transition: all 0.3s ease !important;
+            border: none !important;
+         }
+         
+         .services_section .readmore_bt a:hover {
+            background-color: #d35400 !important;
+            transform: translateY(-3px) !important;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1) !important;
+         }
+         
+         /* Tarjetas individuales - altura uniforme */
+         .services_section .col-md-4 {
+            display: flex !important;
+            flex-direction: column !important;
+            height: 100% !important;
+            margin-bottom: 30px !important;
+         }
+         
+         .services_section .services_section_2 .row {
+            display: flex !important;
+            flex-wrap: wrap !important;
+         }
+         
+         /* Ajustes responsivos */
+         @media (max-width: 768px) {
+            .services_section .col-md-4 {
+               margin-bottom: 40px !important;
+            }
+            .services_section .selection_text {
+               min-height: auto !important;
+            }
+            .services_section .many_text {
+               min-height: auto !important;
+            }
+         }
+         
+         /* Estilos para el banner de video */
+         .event_section .blog_img {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+         }
+         
+         .event_section .video_bt {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            cursor: pointer;
+            transition: all 0.3s ease;
+         }
+         
+         .event_section .video_bt:hover {
+            transform: translate(-50%, -50%) scale(1.1);
+         }
+         
+         .event_section .play_icon img {
+            width: 80px;
+            height: 80px;
+            animation: pulse 2s infinite;
+         }
+         
+         @keyframes pulse {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+            100% { transform: scale(1); opacity: 1; }
+         }
       </style>
    </head>
    <body>
@@ -89,10 +205,10 @@
                <div class="row">
                   <div class="col-md-12">
                      <div class="blog_img" style="position: relative; background-image: url('images/blog-img.webp'); background-size: cover; background-position: center; min-height: 400px; border-radius: 15px;">
-                        <div class="video_bt" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+                        <div class="video_bt">
                            <div class="play_icon">
                               <a href="#" style="display: block;">
-                                 <img src="images/play-icon.webp" alt="Reproducir Video Institucional" width="80" height="80" style="cursor: pointer; transition: transform 0.3s ease;">
+                                 <img src="images/play-icon.webp" alt="Reproducir Video Institucional" width="80" height="80">
                               </a>
                            </div>
                         </div>
@@ -115,29 +231,45 @@
                </div>
                <div class="services_section_2">
                   <div class="row">
+                     <!-- Evento 1: Fibra Óptica -->
                      <div class="col-md-4">
-                        <div class="icon_1"><img src="images/icon-1.webp" alt="Webinar Fibra Óptica" width="80" height="80"></div>
+                        <div class="icon_1">
+                           <img src="images/icon-1.webp" alt="Webinar Fibra Óptica" width="80" height="80">
+                        </div>
                         <h3 class="selection_text">Webinar: Fibra Óptica FTTH</h3>
                         <p class="many_text">15 de Mayo, 2026 - 10:00 AM (VET). Aprende sobre despliegue de redes FTTH, empalmes por fusión y mejores prácticas.</p>
-                        <div class="readmore_bt"><a href="#">Inscribirme</a></div>
+                        <div class="readmore_bt">
+                           <a href="#">Inscribirme</a>
+                        </div>
                      </div>
+                     <!-- Evento 2: Ciberseguridad -->
                      <div class="col-md-4">
-                        <div class="icon_1"><img src="images/icon-2.webp" alt="Taller Ciberseguridad" width="80" height="80"></div>
+                        <div class="icon_1">
+                           <img src="images/icon-2.webp" alt="Taller Ciberseguridad" width="80" height="80">
+                        </div>
                         <h3 class="selection_text">Taller: Ciberseguridad Empresarial</h3>
                         <p class="many_text">28 de Mayo, 2026 - 2:00 PM (VET). Protege tu infraestructura con nuestros expertos en seguridad informática.</p>
-                        <div class="readmore_bt"><a href="#">Inscribirme</a></div>
+                        <div class="readmore_bt">
+                           <a href="#">Inscribirme</a>
+                        </div>
                      </div>
+                     <!-- Evento 3: Transformación Digital -->
                      <div class="col-md-4">
-                        <div class="icon_1"><img src="images/icon-3.webp" alt="Congreso Transformación Digital" width="80" height="80"></div>
+                        <div class="icon_1">
+                           <img src="images/icon-3.webp" alt="Congreso Transformación Digital" width="80" height="80">
+                        </div>
                         <h3 class="selection_text">Congreso: Transformación Digital</h3>
                         <p class="many_text">10 de Junio, 2026 - 9:00 AM (VET). Evento presencial en Caracas con líderes del sector tecnológico.</p>
-                        <div class="readmore_bt"><a href="#">Inscribirme</a></div>
+                        <div class="readmore_bt">
+                           <a href="#">Inscribirme</a>
+                        </div>
                      </div>
                   </div>
                </div>
             </div>
          </div>
       </div>
+      <!-- Próximos Eventos section end -->
       <!-- footer section start -->
       <div class="footer_section layout_padding margin_top90">
          <div class="container">
